@@ -1,0 +1,68 @@
+name: Validate pstack for Codex
+
+on:
+  push:
+    paths:
+      - "adapters/codex/**"
+      - "harness/pstack-codex/**"
+      - "pstack/**"
+      - "scripts/generate-pstack-codex.mjs"
+      - "scripts/verify-pstack-codex-statechart.mjs"
+      - "examples/pstack-codex/**"
+      - "tests/pstack-codex/**"
+      - ".agents/plugins/marketplace.json"
+      - ".github/workflows/validate-pstack-codex.yml"
+  pull_request:
+    paths:
+      - "adapters/codex/**"
+      - "harness/pstack-codex/**"
+      - "scripts/generate-pstack-codex.mjs"
+      - "scripts/verify-pstack-codex-statechart.mjs"
+      - "examples/pstack-codex/**"
+      - "tests/pstack-codex/**"
+      - "pstack/**"
+      - ".agents/plugins/marketplace.json"
+      - ".github/workflows/validate-pstack-codex.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  codex-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Check reproducible Codex package
+        run: node scripts/generate-pstack-codex.mjs --check
+      - name: Test generator and package boundaries
+        run: node --test tests/pstack-codex/*.test.mjs
+      - name: Keep original Cursor and Claude trees unchanged
+        run: git diff --exit-code ae5650febf4320793844c12c4adaa937f417f8da -- pstack harness/pstack
+
+  statechart-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "11"
+      - name: Prepare pinned TLC in the temporary runner directory
+        run: |
+          curl --fail --location --retry 2 https://github.com/tlaplus/tlaplus/releases/download/v1.7.4/tla2tools.jar --output "$RUNNER_TEMP/tla2tools.jar"
+          echo "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88  $RUNNER_TEMP/tla2tools.jar" | sha256sum --check
+      - name: Run passing model, counterexample, and missing-dependency checks
+        run: node scripts/verify-pstack-codex-statechart.mjs --java "$(command -v java)" --tlc "$RUNNER_TEMP/tla2tools.jar" --out "$RUNNER_TEMP/pstack-codex-statechart-proof"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pstack-codex-statechart-proof
+          path: ${{ runner.temp }}/pstack-codex-statechart-proof

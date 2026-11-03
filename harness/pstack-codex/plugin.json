@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pstack-codex",
+  "version": "0.1.0",
+  "description": "Codex workflows for source investigation, bounded agent collaboration, regression checks, measurement, and executable state-machine verification.",
+  "author": {
+    "name": "JackLee992"
+  },
+  "homepage": "https://github.com/JackLee992/pstack-codex",
+  "repository": "https://github.com/JackLee992/pstack-codex",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "pstack",
+    "verification",
+    "statechart",
+    "engineering"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "pstack for Codex",
+        "shortDescription": "Investigate, design, and verify engineering changes",
+        "developerName": "JackLee992",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/JackLee992/pstack-codex",
+        "defaultPrompt": [
+          "Use pstack for Codex to investigate and verify this change."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/generate-pstack-codex.mjs",
+  "upstream": {
+    "repository": "https://github.com/cursor/plugins",
+    "revision": "ae5650febf4320793844c12c4adaa937f417f8da",
+    "path": "pstack",
+    "version": "0.15.36"
+  },
+  "skills": [
+    "poteto-mode",
+    "setup-pstack",
+    "how",
+    "architect",
+    "tdd",
+    "benchmark-checklist",
+    "create-verification-skill",
+    "maintain-verification-skill",
+    "create-formal-verification-skill",
+    "maintain-formal-verification-skill",
+    "statechart"
+  ],
+  "resources": {
+    "how": [
+      "references/explorer-prompt.md",
+      "references/explainer-prompt.md"
+    ],
+    "architect": [
+      "references/design-red-flags.md",
+      "references/rationale-template.md",
+      "references/runner-prompt.md"
+    ],
+    "create-verification-skill": [
+      "references/feature-map-example/README.md",
+      "references/feature-map-example/create-note.md",
+      "references/feature-map-example/search.md"
+    ],
+    "statechart": [
+      "references/render.md",
+      "scripts/statechart",
+      "scripts/package.json",
+      "scripts/tsconfig.json",
+      "scripts/ir.ts",
+      "scripts/pipeline.ts",
+      "scripts/run.ts",
+      "scripts/statechart.ts",
+      "scripts/worker.ts",
+      "scripts/frontends/config.ts",
+      "scripts/frontends/dot.ts",
+      "scripts/frontends/marks.ts",
+      "scripts/frontends/messages.ts",
+      "scripts/frontends/spec.ts",
+      "scripts/frontends/trace.ts",
+      "scripts/frontends/value.ts",
+      "scripts/frontends/verdict.ts",
+      "scripts/frontends/view.ts",
+      "scripts/backends/cfg.ts",
+      "scripts/backends/mermaid.ts",
+      "scripts/backends/plain-text.ts",
+      "scripts/backends/report.ts",
+      "scripts/passes/annotate.ts",
+      "scripts/passes/label.ts",
+      "scripts/passes/lift.ts",
+      "scripts/passes/loop-check.ts",
+      "scripts/passes/paths.ts",
+      "scripts/passes/reach.ts",
+      "scripts/passes/region-check.ts",
+      "scripts/passes/regions.ts"
+    ]
+  },
+  "inputs": {
+    "adapters/codex/config.json": {
+      "sha256": "bbc7d6170e50733257763f2a3598db06c2f583987df67f92f0cbed86e381d18c",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/docs/codex.md": {
+      "sha256": "134da0d3bb628b0320c478ea55b7fbb2ecf9f03506a5a9c4edaa83badb7ffd1d",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/README.md": {
+      "sha256": "4e6ec752bfd92558764196e49460e8000b26c39bf7618e2e26f1c6ac2e0d411d",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/architect/references/rationale-template.md": {
+      "sha256": "bbb6cafe85407648e3671b527ad7170f395245be741823c42e1fa879e882302d",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/architect/references/runner-prompt.md": {
+      "sha256": "bb33d35baa124a825a955baf27be8ec36e4d00da965838c806067eceef557396",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/architect/SKILL.md": {
+      "sha256": "2458cfbcfbda22b01a9cdc74e2fea1259a393928102b98ff3607336a3e12b6cf",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/benchmark-checklist/SKILL.md": {
+      "sha256": "ea9e6ddabac5bc359314ab90119964e1d69c2ed99c466f4441ed231825587ab3",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/create-formal-verification-skill/SKILL.md": {
+      "sha256": "e0859f1981ca71d35e9eed6e53e584191e461fd78513518bfdbf05066a287985",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/create-verification-skill/SKILL.md": {
+      "sha256": "e3937c42dc88c80002bfca3e84f1df27373bcab6e7b7c29d62d1b06e75d48ba7",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/how/references/explainer-prompt.md": {
+      "sha256": "6f5cc1860688023bb245acce984572ebaae7affa8fd8ab2b55435a19d69b2096",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/how/references/explorer-prompt.md": {
+      "sha256": "9cc3026c0c5586c36c90c0f4a03a71c93e2441435a3cbde412d3fd1867cef6aa",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/how/SKILL.md": {
+      "sha256": "0bea2abb9a046a1f3fd4ef005bcb85f8bf3e4da834816ec868052bd2dcbf4bb1",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/maintain-formal-verification-skill/SKILL.md": {
+      "sha256": "7b0000e6085faae39f1fd93639937e1f62e2b079a6ee9000e81003958eb46234",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/maintain-verification-skill/SKILL.md": {
+      "sha256": "fba42c7b21e4ba81d9a0dafcd9efe606347f664e3beb2650c158274c6b9d9771",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/poteto-mode/SKILL.md": {
+      "sha256": "bd432f73083d7417ab21baac48c2419f4c1b92b44a73d6a0e71f3bdc914938f1",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/setup-pstack/SKILL.md": {
+      "sha256": "89a8c76a48e98de7d66ad8daad8871d3aa823b32b262bfeb9e6de21202a7ab50",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/statechart/references/render.md": {
+      "sha256": "ff17eb15c63d454ec3cef46893551a1eea7c86c2c42854119978c4ac87e940d1",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/statechart/scripts/package.json": {
+      "sha256": "5f4b154640ddbf34a5d60f5b6b43fe986a9872d88b007e1532ac9112714183cc",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/statechart/scripts/run.ts": {
+      "sha256": "f1cbd368ab63a338ee3c5386d22c6ada00ee4d68c10e227de61b61e66d184e6d",
+      "executableBits": 0
+    },
+    "adapters/codex/plugin/skills/statechart/SKILL.md": {
+      "sha256": "7c819c896f1ddfbd5100435fa72dbcec93da910f1d8463a8ccbcf2cc6480f1b5",
+      "executableBits": 0
+    },
+    "adapters/codex/upstream-files.json": {
+      "sha256": "c9b74889703e1a39d1a187b3206382a59639c14b6215d41e0fe54ea2661a9d56",
+      "executableBits": 0
+    },
+    "pstack/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executableBits": 0
+    },
+    "pstack/plugin.json": {
+      "sha256": "ebc3ee08ceff88b13521cabd714d92b972fbe9c5b77116f94872ee848b225b31",
+      "executableBits": 0
+    },
+    "pstack/skills/architect/references/design-red-flags.md": {
+      "sha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
+      "executableBits": 0
+    },
+    "pstack/skills/architect/references/rationale-template.md": {
+      "sha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
+      "executableBits": 0
+    },
+    "pstack/skills/architect/references/runner-prompt.md": {
+      "sha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+      "executableBits": 0
+    },
+    "pstack/skills/architect/SKILL.md": {
+      "sha256": "31f8e97a52bfa5432edd61f68ade2a8632ef0bacbc2d2a6802d7a0e6821944ac",
+      "executableBits": 0
+    },
+    "pstack/skills/benchmark-checklist/SKILL.md": {
+      "sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "executableBits": 0
+    },
+    "pstack/skills/create-formal-verification-skill/SKILL.md": {
+      "sha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
+      "executableBits": 0
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/create-note.md": {
+      "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+      "executableBits": 0
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/README.md": {
+      "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+      "executableBits": 0
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/search.md": {
+      "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+      "executableBits": 0
+    },
+    "pstack/skills/create-verification-skill/SKILL.md": {
+      "sha256": "d353973547bf8ad8977eca645f4cd4feaed0d32f4b43d1448f906b0a76c4d694",
+      "executableBits": 0
+    },
+    "pstack/skills/how/references/explainer-prompt.md": {
+      "sha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
+      "executableBits": 0
+    },
+    "pstack/skills/how/references/explorer-prompt.md": {
+      "sha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
+      "executableBits": 0
+    },
+    "pstack/skills/how/SKILL.md": {
+      "sha256": "08a00079bb15b4258874ac3ff62d4ca7e94350ffedb521d0fd296dc9dd21904e",
+      "executableBits": 0
+    },
+    "pstack/skills/maintain-formal-verification-skill/SKILL.md": {
+      "sha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
+      "executableBits": 0
+    },
+    "pstack/skills/maintain-verification-skill/SKILL.md": {
+      "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+      "executableBits": 0
+    },
+    "pstack/skills/poteto-mode/SKILL.md": {
+      "sha256": "ee1848c973a112026f09ba12ea7a13c1654006e7bf170d1c34bf5d5816bc439b",
+      "executableBits": 0
+    },
+    "pstack/skills/setup-pstack/SKILL.md": {
+      "sha256": "df8ad3638a4dca31fb4b43d58056f0299f23ad0530614166d55ef989062b41ec",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/references/render.md": {
+      "sha256": "8cca446eb0c8f87f2ef7b97c4b149f59aacdc153134b4217c4bcde09b10ac3c4",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/backends/cfg.ts": {
+      "sha256": "aea4d8766d214e7fa08f4881f1037319655e75eb56652e1b6d5d4f13a162e3e1",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/backends/mermaid.ts": {
+      "sha256": "75704b2704a9399a39479ff704a580d5b9a1d0fede01fe771df28bf799b434b6",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/backends/plain-text.ts": {
+      "sha256": "e2bedb855eb3806ec3fe7a7bfa49baa309fb4cf0da425b5fe1e0686268ce255a",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/backends/report.ts": {
+      "sha256": "730b4048578ab0468e1581f16fec60b246e321161effb68e481efb373f0f2501",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/config.ts": {
+      "sha256": "5eeab1e755f20a2c83b408c6503fdc9c6b10c971d8dedad3f912bd15f9763daf",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/dot.ts": {
+      "sha256": "4eef9ec848557dcd01ca8dbbec75b71c0653c1b73583108bafbb6f559f6d677b",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/marks.ts": {
+      "sha256": "eb0120e61a4004a435c7b7c46916da9dc8b2fa8696ed0d3eb64dc953fed3ab11",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/messages.ts": {
+      "sha256": "36bfc6fb3ffa86897661efb2aa67bd95b55a4da9a3e952831f6e0668826b4b92",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/spec.ts": {
+      "sha256": "450cdfc8d0577a96818ca3697efebbbf70b530a4ba7e3eee03cf1ba8d3f1a0fd",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/trace.ts": {
+      "sha256": "7d083cf89b81c41556fc3fd5f07019886e0f6783c632475e7181ac4b81887367",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/value.ts": {
+      "sha256": "7c54be394b7a10f60591858a0f08fb1e8dc0941df1f38ede07fbe7719ff56da0",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/verdict.ts": {
+      "sha256": "0d0a9d6b6d6da5a7c48851b86d9d041f22982404dda6288795a1715138d7008b",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/frontends/view.ts": {
+      "sha256": "2c0af8939321c5aaed4b6ecac8ce6a98d0e6774d8bd15d4b02fe4f406b8c9620",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/ir.ts": {
+      "sha256": "5602beca4e4ac08421cfa07e4da989f0e75439f1d136cc923226909e771dc7ff",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/package.json": {
+      "sha256": "2c36842f391275b0f343a38947560adee155fab4a744eacef1e595e9f07c4e3d",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/annotate.ts": {
+      "sha256": "dc8eeee09c3a9a0c060f32fb1d554e01bd80e5265751cdeb041ef3e19561b92a",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/label.ts": {
+      "sha256": "b5ef402369c5e7846be1fd39165e95cbfe715fc36eb9331a0401b26523c539c9",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/lift.ts": {
+      "sha256": "8977dddc6c93bb2e3914d5b50760eb66876107ba51e2b8cf9e18611b4c40c89c",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/loop-check.ts": {
+      "sha256": "07d459385849aa35834040bf34e279c39baba68244ec9da17c57703a6ee8e2d4",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/paths.ts": {
+      "sha256": "9af1066b007ef86cb05c5e278eef09f090f1e46eb91d356e5146edbd4fee4ec7",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/reach.ts": {
+      "sha256": "b52b38f926814937b733221b40bd31075a69a2fb91ecbce2164752a8684bc5d6",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/region-check.ts": {
+      "sha256": "8a6e0618740a14bb7048f6563b4324958177f4685d4d6d90364cc6245b1498b4",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/passes/regions.ts": {
+      "sha256": "d740ebfdbb5ec7b4984412a635a596b43af7a77b8bcb49a1463c8afa75299f72",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/pipeline.ts": {
+      "sha256": "8aa8d9295ab6762f7f2ffae91a0aee98b1a1314747c875edba4598fdab8ed543",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/run.ts": {
+      "sha256": "f330e0a3b0a9f8181c2e52252c4a47db3f0a64f79a7cca5490263e33a5f13c72",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/statechart": {
+      "sha256": "aeffb7077850fd4c225e3d18049ca6ed7b988cf48e88cd8463526a7feaa74d13",
+      "executableBits": 73
+    },
+    "pstack/skills/statechart/scripts/statechart.ts": {
+      "sha256": "1c653f05d0cd0f3298455701f36e3d7d1f837f93e6e642f7c20afb5d613c2d12",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/tsconfig.json": {
+      "sha256": "6bb2af53f7b251328e6117cd4fb761468dc4d4b96085d31a19304ccb73c32cc1",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/scripts/worker.ts": {
+      "sha256": "1f18ed5ef806982e05e8a40fc217e88257700b28b63cb4acbd647872f85f782b",
+      "executableBits": 0
+    },
+    "pstack/skills/statechart/SKILL.md": {
+      "sha256": "010b7b4532406739b1c3a426d1a45f02bb618a42561fc96b3976e064a7f8384d",
+      "executableBits": 0
+    },
+    "pstack/skills/tdd/SKILL.md": {
+      "sha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+      "executableBits": 0
+    },
+    "scripts/generate-pstack-codex.mjs": {
+      "sha256": "4e23257823feca3fb7290b9c71068c0bf17c91dd68baa3feb560638c466478b9",
+      "executableBits": 0
+    }
+  }
+}

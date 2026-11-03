@@ -1,0 +1,75 @@
+{
+  "schema": "pstack-codex-validation-v1",
+  "date": "2026-11-03",
+  "upstream_revision": "ae5650febf4320793844c12c4adaa937f417f8da",
+  "plugin_version": "0.1.0",
+  "generator_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "statechart": {
+    "schema": "pstack-codex-statechart-smoke-v1",
+    "passed": true,
+    "runtime": {
+      "node": "v24.17.0",
+      "java": "openjdk version \"11.0.32.1\" 2026-08-18 LTS",
+      "tlcSha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88"
+    },
+    "inputs": {
+      "examples/pstack-codex/async-owner/Owner.tla": "c497770bc221864297b673b0f5667847f181ae5eb25f1a1ade9e27a3bfdc65eb",
+      "examples/pstack-codex/async-owner/safe.cfg": "78361f08124cbadee1f2f913bba5f16933d437fb5b7949630c8bd7636e647ca2",
+      "examples/pstack-codex/async-owner/broken.cfg": "17f99a2755983cfc1e67b1e8ba7ca166c2acef0688898f30a771a21f2923609c",
+      "examples/pstack-codex/async-owner/view.ts": "4a4d8e7038f8e54945ca683c3ecc02c75d5aa7328785fe18616cd0931c547573",
+      "harness/pstack-codex/UPSTREAM.json": "510ece0e961d0f1bf650ea4c260392cc453a4d6b0eb84fc4ea9243fd0587defc",
+      "scripts/verify-pstack-codex-statechart.mjs": "fd4cc1301672ced7f633167e45cf8474325832564d189bb2f0db517624173512"
+    },
+    "cases": [
+      {
+        "name": "safe",
+        "expectedExit": 0,
+        "actualExit": 0,
+        "passed": true,
+        "signal": null,
+        "error": null,
+        "reportPresent": true
+      },
+      {
+        "name": "broken",
+        "expectedExit": 1,
+        "actualExit": 1,
+        "passed": true,
+        "signal": null,
+        "error": null,
+        "reportPresent": true
+      },
+      {
+        "name": "missing-dependencies",
+        "expectedExit": 2,
+        "actualExit": 2,
+        "passed": true,
+        "signal": null,
+        "error": null,
+        "reportPresent": false
+      }
+    ],
+    "installedPlugin": false,
+    "evidenceScope": "Bounded generic model and runner behavior; no product or device acceptance"
+  },
+  "codex_discovery": {
+    "pluginId": "pstack-codex@pstack-codex",
+    "name": "pstack-codex",
+    "marketplaceName": "pstack-codex",
+    "version": "0.1.0",
+    "installed": false,
+    "enabled": false
+  },
+  "installed_runtime_behavior_verified": false,
+  "static_review_scenarios": 7,
+  "static_review_is_behavioral_evaluation": false,
+  "skill_structure_validation": {
+    "tool": "skill-creator/quick_validate.py",
+    "passed": 11,
+    "failed": 0,
+    "dependency_setup": "isolated temporary directory"
+  }
+}

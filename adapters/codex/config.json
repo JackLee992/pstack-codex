@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repository": "https://github.com/cursor/plugins",
+    "revision": "ae5650febf4320793844c12c4adaa937f417f8da",
+    "path": "pstack",
+    "version": "0.15.36"
+  },
+  "plugin": {
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "pstack-codex",
+    "version": "0.1.0",
+    "description": "Codex workflows for source investigation, bounded agent collaboration, regression checks, measurement, and executable state-machine verification.",
+    "author": {
+      "name": "JackLee992"
+    },
+    "homepage": "https://github.com/JackLee992/pstack-codex",
+    "repository": "https://github.com/JackLee992/pstack-codex",
+    "license": "MIT",
+    "keywords": [
+      "codex",
+      "pstack",
+      "verification",
+      "statechart",
+      "engineering"
+    ],
+    "extensions": {
+      "com.openai": {
+        "interface": {
+          "displayName": "pstack for Codex",
+          "shortDescription": "Investigate, design, and verify engineering changes",
+          "developerName": "JackLee992",
+          "category": "Developer Tools",
+          "capabilities": [
+            "Read",
+            "Write"
+          ],
+          "websiteURL": "https://github.com/JackLee992/pstack-codex",
+          "defaultPrompt": [
+            "Use pstack for Codex to investigate and verify this change."
+          ]
+        }
+      }
+    }
+  },
+  "skills": [
+    "poteto-mode",
+    "setup-pstack",
+    "how",
+    "architect",
+    "tdd",
+    "benchmark-checklist",
+    "create-verification-skill",
+    "maintain-verification-skill",
+    "create-formal-verification-skill",
+    "maintain-formal-verification-skill",
+    "statechart"
+  ],
+  "overlay": "adapters/codex/plugin",
+  "output": "harness/pstack-codex",
+  "resources": {
+    "how": [
+      "references/explorer-prompt.md",
+      "references/explainer-prompt.md"
+    ],
+    "architect": [
+      "references/design-red-flags.md",
+      "references/rationale-template.md",
+      "references/runner-prompt.md"
+    ],
+    "create-verification-skill": [
+      "references/feature-map-example/README.md",
+      "references/feature-map-example/create-note.md",
+      "references/feature-map-example/search.md"
+    ],
+    "statechart": [
+      "references/render.md",
+      "scripts/statechart",
+      "scripts/package.json",
+      "scripts/tsconfig.json",
+      "scripts/ir.ts",
+      "scripts/pipeline.ts",
+      "scripts/run.ts",
+      "scripts/statechart.ts",
+      "scripts/worker.ts",
+      "scripts/frontends/config.ts",
+      "scripts/frontends/dot.ts",
+      "scripts/frontends/marks.ts",
+      "scripts/frontends/messages.ts",
+      "scripts/frontends/spec.ts",
+      "scripts/frontends/trace.ts",
+      "scripts/frontends/value.ts",
+      "scripts/frontends/verdict.ts",
+      "scripts/frontends/view.ts",
+      "scripts/backends/cfg.ts",
+      "scripts/backends/mermaid.ts",
+      "scripts/backends/plain-text.ts",
+      "scripts/backends/report.ts",
+      "scripts/passes/annotate.ts",
+      "scripts/passes/label.ts",
+      "scripts/passes/lift.ts",
+      "scripts/passes/loop-check.ts",
+      "scripts/passes/paths.ts",
+      "scripts/passes/reach.ts",
+      "scripts/passes/region-check.ts",
+      "scripts/passes/regions.ts"
+    ]
+  }
+}

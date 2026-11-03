@@ -1,3 +1,9 @@
+# pstack for Codex — fork
+
+Codex adaptation: [中文使用与开发说明](README-CODEX.zh-CN.md) · [Distributable plugin](harness/pstack-codex/).
+
+This fork adds a separate Codex package. The original Cursor marketplace and plugins are retained below.
+
 # Cursor plugins
 
 Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest.
