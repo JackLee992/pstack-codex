@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pstack-codex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Codex workflows for source investigation, bounded agent collaboration, regression checks, measurement, and executable state-machine verification.",
   "author": {
     "name": "JackLee992"

@@ -1,6 +1,6 @@
 # pstack 的 Codex 适配
 
-本仓库是 [`cursor/plugins`](https://github.com/cursor/plugins) 的真实 GitHub fork。Codex 首版插件名为 **pstack-codex**，版本 **0.1.0**，基于 pstack **0.15.36**、上游提交 [`ae5650f`](https://github.com/cursor/plugins/commit/ae5650febf4320793844c12c4adaa937f417f8da)。原作者为 Lauren Tan，许可为 MIT。
+本仓库是 [`cursor/plugins`](https://github.com/cursor/plugins) 的真实 GitHub fork。Codex 插件名为 **pstack-codex**，当前版本 **0.1.1**，基于 pstack **0.15.36**、上游提交 [`ae5650f`](https://github.com/cursor/plugins/commit/ae5650febf4320793844c12c4adaa937f417f8da)。原作者为 Lauren Tan，许可为 MIT。
 
 ## 已实现的适配
 
@@ -22,9 +22,21 @@
 ```sh
 codex plugin marketplace add JackLee992/pstack-codex --ref codex/pstack-adaptation
 codex plugin list --marketplace pstack-codex --available --json
+codex plugin add pstack-codex@pstack-codex --json
+codex plugin list --marketplace pstack-codex --json
 ```
 
-随后在支持本地 marketplace 的 Codex 客户端插件目录中选择 **pstack for Codex** 并安装。不同客户端的入口和能力可能不同；以实际技能目录显示的名称为准。无需将整个上游 monorepo 复制进个人技能目录。
+已克隆本仓库时，第一条也可用 `codex plugin marketplace add /absolute/path/to/pstack-codex`，不必再克隆一次远端。`plugin add` 安装并启用当前用户插件，其他项目也能发现；不向项目或个人裸技能目录写入 `how`、`architect`、`tdd` 等文件。支持图形插件目录的客户端也可选择 **pstack for Codex** 安装。
+
+CLI **0.163.0-alpha.10.2** 实测注册名为 **`pstack-codex:<技能名>`**。例如“使用 `pstack-codex:how` 解释这个模块”，或“使用 `pstack-codex:architect` 评估这个生命周期”。支持 `$` 技能选择器的客户端可输入 `$` 后选中对应名称。安装后从下一轮对话开始可用；不需要中断当前任务。不同客户端以实际技能目录显示的名称为准。
+
+安装缓存是版本化的自包含包，不会跟随工作树每次保存自动更新。升级时先重新生成、验证和发布版本，再对 Git marketplace 执行 `codex plugin marketplace upgrade pstack-codex`，重新运行 `plugin add` 并核对安装版本；本地 marketplace 直接重新安装新版本。不会设置自动拉取或后台更新。
+
+维护者可用生成器只读核对安装返回的绝对缓存路径（同时检查内容和可执行位）：
+
+```sh
+node scripts/generate-pstack-codex.mjs --check --out /absolute/installedPath/from/plugin-add
+```
 
 运行 `setup-pstack` 可检查当前工具和角色选择。普通技能不要求先写全局规则文件。除 `setup-pstack` 外，首版遵从上游的显式调用策略；按需调用，避免把整套工程流程加入每个简单任务。
 

@@ -1,14 +1,22 @@
 # pstack for Codex
 
-这是 pstack 的 Codex 适配包，版本 **0.1.0**。上游为 Lauren Tan 的 `cursor/plugins/pstack` **0.15.36**，固定提交 `ae5650febf4320793844c12c4adaa937f417f8da`，沿用 MIT 许可。
+这是 pstack 的 Codex 适配包，版本 **0.1.1**。上游为 Lauren Tan 的 `cursor/plugins/pstack` **0.15.36**，固定提交 `ae5650febf4320793844c12c4adaa937f417f8da`，沿用 MIT 许可。
 
 本目录由 `scripts/generate-pstack-codex.mjs` 生成。修改源位于仓库的 `adapters/codex/`，请勿直接修改分发目录。原始 Cursor 插件与既有 Claude 分发目录保留。
 
 ## 使用
 
-通过仓库 marketplace 将 `pstack-codex` 加入支持本地插件的 Codex 客户端。安装与启用步骤见[仓库中文说明](https://github.com/JackLee992/pstack-codex/blob/codex/pstack-adaptation/README-CODEX.zh-CN.md)。包中没有 MCP 服务或生命周期 hooks；生成与验证不会替用户安装或启用插件。
+通过仓库 marketplace 将 `pstack-codex` 加入支持插件的 Codex 客户端：
 
-安装后，按客户端技能目录实际显示的名称调用。适合的任务示例：
+```sh
+codex plugin marketplace add JackLee992/pstack-codex --ref codex/pstack-adaptation
+codex plugin add pstack-codex@pstack-codex --json
+codex plugin list --marketplace pstack-codex --json
+```
+
+安装作用于当前用户，其他项目也能发现技能；不向项目或个人裸技能目录复制文件。CLI 0.163.0-alpha.10.2 实测以 `pstack-codex:how`、`pstack-codex:architect` 等名称注册全部 11 个技能，避免覆盖个人同名技能。安装后从下一轮对话开始使用；无需中断当前工作。详细安装、升级和验证步骤见[仓库中文说明](https://github.com/JackLee992/pstack-codex/blob/codex/pstack-adaptation/README-CODEX.zh-CN.md)。包中没有 MCP 服务或生命周期 hooks；生成与验证不会替用户安装或启用插件。
+
+安装后，按客户端技能目录实际显示的名称显式调用，例如“使用 `pstack-codex:how` 解释这个模块”。支持 `$` 技能选择器的客户端也可输入 `$` 后选择对应名称。适合的任务示例：
 
 - 用 `how` 解释一个子系统的入口、资源所有权和失败处理。
 - 用 `architect` 比较一个接口或异步生命周期的设计。
